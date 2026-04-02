@@ -1,0 +1,18 @@
+.logo {
+  height: 2.8rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    height: 1.8rem;
+  }
+}

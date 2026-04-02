@@ -1,0 +1,126 @@
+.header {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  gap: 1.0rem;
+  align-items: baseline;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 1.0rem;
+}
+
+.header-links {
+  display: flex;
+  gap: 1.7rem;
+  align-items: baseline;
+}
+
+.header a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 0.3rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.header a.active {
+  text-decoration: none;
+  border-bottom: 4px solid #116acc;
+}
+
+.burger {
+  display: none;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 22px;
+  height: 2px;
+  background: #111;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.burger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding-bottom: 0.4rem;
+    align-items: center;
+  }
+
+  .header-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-bottom: 0.6rem;
+    order: 2;
+    align-items: center;
+  }
+
+  .header-links.open {
+    display: flex;
+  }
+
+  .header a {
+    padding-bottom: 0.4rem;
+    font-size: 0.8rem;
+    width: fit-content;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header-top {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .header a {
+    font-size: 0.7rem;
+  }
+}

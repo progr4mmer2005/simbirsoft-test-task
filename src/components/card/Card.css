@@ -1,0 +1,69 @@
+.card {
+  background-color: white;
+  height: 298px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-image {
+  height: 192px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-title {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  margin-top: 0.64rem;
+  width: 100%;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.league-title {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 0.4rem;
+}
+
+.team-title {
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.card-subtitle {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 0.56rem;
+  color: #666;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
